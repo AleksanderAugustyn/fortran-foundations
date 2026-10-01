@@ -1,4 +1,4 @@
-# Fortran-Foundations
+# fortran-foundations
 
 A foundational Fortran library providing precision management, physical constants, and numerical algorithms for scientific computing. Designed as a self-contained base layer for nuclear structure and quantum mechanics codes.
 
@@ -75,13 +75,13 @@ Build types: `Debug`, `Release`, `RelWithDebInfo`. Debug builds enable IEEE 754 
 The library builds as a static library (`fortran_foundations`). To use it in a downstream CMake project:
 
 ```cmake
-add_subdirectory(Fortran-Foundations)
+add_subdirectory(fortran-foundations)
 target_link_libraries(your_target PRIVATE FortranFoundations::fortran_foundations)
 ```
 
 ## Dependencies
 
-- [GCC-Compiler-Options](https://github.com/AleksanderAugustyn/GCC-Compiler-Options) — automatically fetched by CMake at configure time
+- [gcc-compiler-options](https://github.com/AleksanderAugustyn/gcc-compiler-options) — automatically fetched by CMake at configure time
 
 No external numerical libraries (BLAS, LAPACK, etc.) are required.
 

@@ -10,11 +10,11 @@ project(fortran-foundations
 
 # --- Fetch GCC compiler options ---
 FetchContent_Declare(
-        GCC-Compiler-Options
-        GIT_REPOSITORY https://github.com/AleksanderAugustyn/GCC-Compiler-Options.git
+        gcc-compiler-options
+        GIT_REPOSITORY https://github.com/AleksanderAugustyn/gcc-compiler-options.git
         GIT_TAG 2.0.0
 )
-FetchContent_MakeAvailable(GCC-Compiler-Options)
+FetchContent_MakeAvailable(gcc-compiler-options)
 
 if (CMAKE_VERSION VERSION_GREATER_EQUAL "3.20")
     set(CMAKE_Fortran_PREPROCESS ON)
@@ -66,7 +66,7 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
 else ()
     set(FORTRAN_FOUNDATIONS_TESTS_DEFAULT OFF)
 endif ()
-option(FORTRAN_FOUNDATIONS_BUILD_TESTS "Build Fortran-Foundations tests" ${FORTRAN_FOUNDATIONS_TESTS_DEFAULT})
+option(FORTRAN_FOUNDATIONS_BUILD_TESTS "Build fortran-foundations tests" ${FORTRAN_FOUNDATIONS_TESTS_DEFAULT})
 
 if (FORTRAN_FOUNDATIONS_BUILD_TESTS)
     enable_testing()
